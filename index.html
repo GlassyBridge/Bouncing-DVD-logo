@@ -7,8 +7,37 @@
     <title>Bouncing DVD Logo</title>
 </head>
 <body>
-    <canvas id="canvas1">
-    </canvas>
+    <canvas id="canvas1"></canvas>
+    
+    <div class="control">
+        <div class="control-group">
+            <label for="currentSpeed">Speed:</label>
+            <input type="range" id="speedInput" min="1" max="100" value="50" step="1">
+            <input type="number" id="currentSpeed" min="1" max="100" value="50" step="1">
+        </div>
+        <div class="control-group">
+            <label for="currentSize">Size:</label>
+            <input type="range" id="sizeInput" min="1" max="100" value="50" step="1">
+            <input type="number" id="currentSize" min="1" max="100" value="50" step="1">
+        </div>
+        <div class="control-group">
+            <label for="image">Image:</label>
+            <input type="file" id="image" accept="image/*">
+        </div>
+        <div class="control-group">
+            <label for="image-check">White image on a transparent background:</label>
+            <input type="checkbox" id="image-check">
+        </div>
+        <div class="control-group">
+            <label for="rd-color">Random color:</label>
+            <input type="checkbox" id="rd-color" checked>
+        </div>
+        <div class="control-group" id="color-field" hidden>
+            <label for="color">Color:</label>
+            <input type="color" id="color">
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
