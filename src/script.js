@@ -91,7 +91,7 @@ class Logo {
         context.drawImage(this.image, this.x, this.y, this.width, this.height);
 
         context.save();
-        context.globalCompositeOperation = this.type; //'source-atop' for transparent backgrounds else use 'color'/'multiply'
+        context.globalCompositeOperation = this.type;
         
         if (this.change) {
             context.fillStyle = 'hsl(' + this.x / 4 + ', 100%, 50%)';
