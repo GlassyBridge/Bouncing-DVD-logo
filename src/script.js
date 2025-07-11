@@ -69,6 +69,10 @@ class Logo {
         return this.image.src;
     }
 
+    resize(){
+        this.x = Math.max(0, Math.min(this.effect.width - this.width, this.x));
+        this.y = Math.max(0, Math.min(this.effect.height - this.height, this.y));
+    }
     ratio(image){
         let width = image.naturalWidth;
         let height = image.naturalHeight;
@@ -114,6 +118,14 @@ class Effect {
         this.height = this.canvas.height;
 
         this.logo = new Logo(this);
+
+        window.addEventListener('resize', () => {
+            this.canvas.width = window.innerWidth;
+            this.canvas.height = window.innerHeight;
+            this.width = this.canvas.width;
+            this.height = this.canvas.height;
+            this.logo.resize();
+        });
     }
     changeSpeed(speed){
         this.logo.speed = speed;
