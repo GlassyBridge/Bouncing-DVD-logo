@@ -5,7 +5,7 @@ class Logo {
         this._speed = 3;
 
         this.image = new Image();
-        this.image.src = 'dvd-logo-png-19264.png';
+        this.image.src = 'images/dvd-logo-png-19264.png';
         
         this.image.onload = () => {
             console.log("Image Loaded");
