@@ -222,3 +222,17 @@ color.addEventListener('input', () => {
     console.log('color: ' + color.value);
     effect.changeColor(color.value);
 });
+
+const expand = document.getElementById('expand');
+const hide = document.getElementById('hide');
+
+expand.addEventListener('click', () => {
+    if (expand.textContent === '• • •'){
+        expand.textContent = '•••';
+        hide.hidden = true;
+    }
+    else {
+        expand.textContent = '• • •';
+        hide.hidden = false;
+    }
+});
