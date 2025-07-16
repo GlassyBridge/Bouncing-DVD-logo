@@ -8,8 +8,6 @@ class Logo {
         this.image.src = 'images/dvd-logo-png-19264.png';
         
         this.image.onload = () => {
-            console.log("Image Loaded");
-            
             let {width,height} = this.ratio(this.image);
             this.width = this.size * width;
             this.height = this.size * height;
@@ -177,7 +175,7 @@ const sizeDisplay = document.getElementById('currentSize');
 sizeDisplay.value = effect.logo.size / 10;
 
 const randomColor = document.getElementById('rd-color');
-const wiotb = document.getElementById('image-check');
+const colorMode = document.getElementById('color-mode');
 
 const image = document.getElementById('image');
 const color = document.getElementById('color');
@@ -210,12 +208,12 @@ image.addEventListener('change', function(event) {
     }
 });
 
-wiotb.addEventListener('input', () => {
-    if (wiotb.checked){
-        effect.changeType('source-atop');
+colorMode.addEventListener('input', () => {
+    if (colorMode.value !== ''){
+        effect.changeType(colorMode.value);
     }
     else {
-        effect.changeType('multiply');
+        effect.changeType('color');
     }
 });
 
@@ -231,7 +229,6 @@ randomColor.addEventListener('input', () => {
 });
 
 color.addEventListener('input', () => {
-    console.log('color: ' + color.value);
     effect.changeColor(color.value);
 });
 

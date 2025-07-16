@@ -25,11 +25,12 @@ p{
     position: fixed;
     color: var(--color3);
     backdrop-filter: blur(1px);
-    /* background-color: var(--color2); */
     border-radius: 2em;
     border: 6px solid var(--color1);
-    min-width: 4em;
-    padding: 2px 4px;
+    max-height: 80%;
+    max-width: 80%;
+    overflow: auto;
+    padding: 2px 15px;
     bottom: 20px;
     left: 20px;
 }
