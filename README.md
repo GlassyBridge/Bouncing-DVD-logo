@@ -2,6 +2,9 @@
 The classic Bouncing DVD LOGO remake by @GlassyBridge/@GB114.
 ## Overview
 This project showcases the classic DVD logo made using HTML, CSS and JavaScript.
+## Features
+- Collapsable control panel that allows you to change several parameters.
+- Custom image support.
 ### How it was made
 It is made using JavaScript's OOP principles like classes, objects and getter-setter methods.
 ## How to use
